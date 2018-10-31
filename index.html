@@ -1,1 +1,180 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tech Test sheet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+  <style>
+
+.filDiv {
+  /*float: left;*/
+  background-color: #B2999D;
+  color: #ffffff;
+  width: 310px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+
+}
+.show {
+  display: block;
+}
+#dbla {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  text-align: center;
+}
+#dblb {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 2;
+  width: 620px;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 310px 310px 310px;
+  grid-template-rows: 33% 33% 33% auto;
+  margin-left : 1px
+  margin-right: 1px;
+}
+
+.myBtnContainer {
+  margin-left: 55px;
+  max-width: 940px;
+  max-width: 940px;
+  margin-top: 10px;
+  background: #white;
+  transition: all 0.3s ease;
+  height: 50px;
+  padding: 2px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 5px 40px;
+  background-color: #594f50;
+  color:white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.body {
+  max-width: 940px;
+}
+
+@media (max-width: 600px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+  #dblb,
+  #dbla,
+  .filDiv
+
+   {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+</style>
+<body>
+<div class="myBtnContainer">
+  <br></br>
+  <button class="btn active" onclick="filterSelection('all')"> All</button>
+  <button class="btn" onclick="filterSelection('as')"> A </button>
+  <button class="btn" onclick="filterSelection('bs')"> B </button>
+  <button class="btn" onclick="filterSelection('cs')"> C </button>
+  <button class="btn" onclick="filterSelection('ds')"> D </button>
+  <button class="btn" onclick="filterSelection('es')"> E </button>
+</div>
+
+<div class="container">
+
+  <div class="filDiv as" id="dbla">A</div>
+  <div class="filDiv cs">C</div>
+  <div class="filDiv bs">B</div>
+  <div class="filDiv es">E</div>
+  <div class="filDiv bs">B</div>
+  <div class="filDiv ds">D</div>
+  <div class="filDiv as">A</div>
+  <div class="filDiv cs">C</div>
+  <div class="filDiv bs" id= "dblb">B</div>
+  <div class="filDiv ds">D</div>
+  <div class="filDiv as">A</div>
+  <div class="filDiv es">E</div>
+
+ </div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  let x, i;
+  x = document.getElementsByClassName("filDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  let i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  let i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+let btnContainer = document.getElementById("myBtnContainer");
+let btns = btnContainer.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
+</script>
+
+
+
+
+  </body>
+</html>..
