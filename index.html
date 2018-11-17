@@ -3,77 +3,23 @@
   <head>
 
     <title>Portfolio</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="index.css">
+      <link rel="script" href="index.js">
+      <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <link rel="icon" href="https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1542453586/img_0387_LBL_icon.ico">
 
 <!--  Content  -->
-<article>
+<!-- <article>
   <h1>Portfolio <br /> <span>(Made by <a href="https://www.linkedin.com/in/andylevis/" target="_blank">Andy Levis</a>,  <a href="">Examples of my work coming soon</a>)</span></h1>
 </article>
 
-<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+ Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback
 <video autoplay loop id="video-background" muted plays-inline>
   <source src="https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4" type="video/mp4">
-</video>
-
-<style>
-   body {
-  margin: 0;
-  padding: 0;
-/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
-  background: #333;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-/* The only rule that matters */
-#video-background {
-/*  making the video fullscreen  */
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-}
-
-/* These just style the content */
-article {
-/*  just a fancy border  */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 10px solid rgba(255, 255, 255, 0.5);
-  margin: 10px;
-}
-
-h1 {
-  position: absolute;
-  top: 60%;
-  width: 100%;
-  font-size: 36px;
-  letter-spacing: 3px;
-  color: #fff;
-  font-family: Oswald, sans-serif;
-  text-align: center;
-}
-
-h1 span {
-  font-family: sans-serif;
-  letter-spacing: 0;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-h1 span a {
-  color: #fff;
-}
-</style>
+</video> -->
 
 
 
@@ -81,9 +27,101 @@ h1 span a {
 
   <body>
 
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex text-center h-100">
+      <div class="my-auto w-100 text-white">
+        <h1 class="display-3">Portfolio</h1>
+        <h2><span>Made by <a href="https://www.linkedin.com/in/andylevis/" target="_blank">Andy Levis</a>
+        </h2>
+        <h2>see below for examples of my work</h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <h2>My projects </h2>
+
+  <p></p>
+
+</main>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1537191430/georgia-vagim-381292-unsplash.jpg');">
+  <div class="card-category">Concept </div>
+  <div class="card-description">
+    <h2>Movies </h2>
+    <p>an AirBNB clone/ startup idea </p>
+  </div>
+  <a class="card-link" href="https://movies-movies-movies.herokuapp.com/users/sign_in" ></a>
+</div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1542386636/jeshoots-com-436787-unsplash.jpg');">
+  <div class="card-category">Team Project</div>
+  <div class="card-description">
+    <h2>Homework Monitor</h2>
+    <p>Please message me for login details </p>
+  </div>
+
+  <a class="card-link" href="http://www.homeworkmonitor.co.uk/" ></a>
+</div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1540478099/adi-goldstein-717512-unsplash.jpg');">
+  <div class="card-category">Client work</div>
+  <div class="card-description">
+    <h2>Wish it Events</h2>
+    <p>an Events company starter site </p>
+  </div>
+
+  <a class="card-link" href="https://wish-it-draft.herokuapp.com/" ></a>
+</div>
+    </div>
+  </div>
+
+</div>
+
+
+<br></br>
+
+<div id="contact">
+
+
+  <div class="banner" style="background-image:  url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/c_scale,w_1738/v1542467553/vojtech-bruzek-1074357-unsplash.jpg');">
+    <div class= "contact_form">
+
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSBdx-WuftJ0JJjlGLjHIYUqpSWJa6EmIWRhsXgxausqAk4A/viewform?embedded=true" width="100%" height="862" frameborder="0" align="middle"  marginheight="0" marginwidth="0" >Loading...</iframe>
+
+
+<br></br>
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+<br></br>
 
 
 
 
   </body>
-</html>..
+
+
+</html>
