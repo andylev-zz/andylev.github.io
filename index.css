@@ -80,7 +80,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    background: url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/c_scale,w_1600/v1542381498/mnm-all-533016-unsplash.jpg') black no-repeat center center scroll;
   }
   header video {
     display: none;
